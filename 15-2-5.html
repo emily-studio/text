@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-2-5</title>
+</head>
+
+<body>
+    <button onclick="startCount()">開始累加</button>
+    <input type="text" id="txt" value="">
+</body>
+<button onclick="stopCount()">結束累加</button>
+
+<script>
+
+    var countNum = 0;
+
+    //作為 clearTimeout() 用的變數
+    var t;
+
+    //累加用的函式
+    function count() {
+        document.getElementById('txt').value = countNum;
+
+
+        //進行數字的累加
+        countNum = countNum + 1;
+        t = setTimeout(function () { count() }, 1000);
+    }
+    //開始累加
+    function startCount() {
+        //執行累加用的函式
+        count();
+    }
+
+    //結束累加
+    function stopCount() {
+        clearTimeout(t);
+    }
+</script>
+
+</html>

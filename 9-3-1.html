@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-3-1</title>
+
+    <script>
+        let obj = {
+            fname: 'john',
+            lname: 'wu',
+            age: 'null',
+            lineid: 'johnwu',
+
+        };
+
+        // 印出參數的class name
+        for (let attr in obj) {
+            console.log(`The property object variable is, ${attr}`);
+        }
+
+        // 印出的是所有參數的值
+        for (let attr in obj) {
+            console.log(obj[attr])
+        }
+
+        let arr = [
+            'a', 'b', 'c'
+        ]
+        for (let key in arr) {
+            console.log(`The index number in array variable is ${key}`);
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
